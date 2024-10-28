@@ -1,0 +1,68 @@
+.sectionOne-container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.sectionOne-items-container {
+    overflow-y: scroll;
+    height: 430px;
+    width: 940px;
+}
+.sectionOne-main-container{
+  padding: 10px;
+}
+.sectionOne-row-one, .sectionOne-row-two, .sectionOne-row-three{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.sectionOne-item1-class, .sectionOne-item2-class, .sectionOne-item3-class, .sectionOne-item4-class, .sectionOne-item5-class, 
+.sectionOne-item6-class, .sectionOne-item7-class, .sectionOne-item8-class, .sectionOne-item9-class, .sectionOne-item10-class{
+    background-color: #EBEBEB;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    width: 25%;
+    height: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.sectionOne-item1-img, .sectionOne-item2-img, .sectionOne-item3-img, .sectionOne-item4-img, .sectionOne-item5-img, 
+.sectionOne-item6-img, .sectionOne-item7-img, .sectionOne-item8-img, .sectionOne-item9-img, .sectionOne-item10-img{
+    max-width: 100%;
+    max-height: 100%;
+    height: 137px; 
+    width: auto;
+    border-radius: 5px;
+}
+.item-name {
+    margin: 0;
+}
+.sectionOne-addItem{
+    padding-bottom: 12px;
+}
+.sectionOne-checkout-container {
+    margin-top: 20px;
+}
+.sectionOne-minus-btn, .sectionOne-plus-btn{
+    background-color: #9CB380;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    font-size: large;
+}
+.sectionOne-minus-btn:hover, .sectionOne-plus-btn:hover{
+    cursor: pointer;
+}
+.sectionOne-count-class {
+    padding: 10px;
+    font-weight: bold;
+    font-style: bold;
+    font-size: larger;
+    color: black;
+}
+.sectionOne-minus-btn:active, .sectionOne-plus-btn:active {
+    transform: scale(0.95);
+}

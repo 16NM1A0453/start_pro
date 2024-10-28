@@ -1,0 +1,164 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* Remove gaps between cells */
+  margin: 20px auto;
+  /* Center table horizontally and add margin */
+}
+
+th,
+td {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  height: 50px;
+  /* Fixed height for cells */
+  transition: background-color 0.3s;
+  /* Smooth background transition */
+}
+
+.removeItem-button {
+  background-color: #CF928C;
+  border: none;
+  border-radius: 5px;
+}
+
+.removeItem-button:active{
+  transform: scale(0.95);
+}
+
+.removeItem-button:hover {
+  cursor: pointer;
+}
+
+.td-img {
+  overflow: hidden;
+}
+
+.item-img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 137px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.item-quant, .item-total, .finalBill-title, .displayTotal {
+  color:black;
+}
+
+.displayTotal {
+  color:black;
+  font-weight: bold;
+}
+
+.finalBill-print-table {
+  display: none;
+  /* Hide text in normal view */
+}
+
+th {
+  background-color: #e3f6f5;
+  font-weight: bold;
+}
+
+.finalBill-show-total {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  align-items: right;
+  display: block;
+}
+
+.finalBill-print-button {
+  background-color: #9CB380;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 41px;
+  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.finalBill-print-button:active {
+  transform: scale(0.95);
+  /* Slightly reduce size on click */
+}
+
+@media print {
+  body {
+    transform: scale(0.8); /* Adjust the scale to decrease size */
+    transform-origin: top left; /* Adjust the origin for scaling */
+    width: 100%; /* Ensure it fits the print page */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Hides print button during printing */
+  .finalBill-print-button {
+    display: none;
+  }
+
+  .finalBill-title {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .section1-container {
+    display: none;
+    /* Hide section 1 when printing */
+  }
+
+  .main-container {
+    height: 100vh;
+    /* Use viewport height for printing */
+  }
+
+  .section2-container {
+    margin: 0;
+    /* Remove margins for printing */
+    width: 100vw;
+    /* Allow width to be based on content */
+    height: 100vh;
+    /* Allow height to be based on content */
+    page-break-inside: avoid;
+    /* Prevent page breaks inside the container */
+  }
+
+  table {
+    width: 700px;
+    height: 100px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    /* Adjust padding as needed */
+    text-align: left;
+    /* Align text */
+    border: none;
+  }
+
+  .finalBill-normal-table {
+    display: none;
+  }
+
+  .finalBill-print-table {
+    display: table;
+    /* Show the print table */
+    width: 100%;
+    /* Full width */
+    border-collapse: collapse;
+    /* Collapse borders */
+    table-layout: auto;
+  }
+
+  .finalBill-print-table th,
+  .finalBill-print-table td {
+    padding: 12px;
+    /* Padding inside cells */
+    border: 1px dotted #ddd;
+    /* Light border */
+  }
+}
