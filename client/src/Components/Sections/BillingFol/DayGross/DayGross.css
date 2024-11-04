@@ -1,0 +1,25 @@
+.no-style {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+.dayGross-footer-container {
+    padding: 10px;
+}
+.display-day-gross {
+    font-size: medium;
+    font-weight: bold;
+}
+.gross-table-view {
+    padding-right: 15px;
+    overflow-y: auto;
+    height: 400px;
+}
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bill-date {
+    margin-left: 4px;
+}

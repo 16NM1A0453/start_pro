@@ -1,0 +1,101 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.page-container {
+  width: 95%;
+  height: 95%;
+  background-color: #C82D2D;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.header-container{
+  height: 10%;
+  width: 100%;
+  background-color: #EBF0E6;
+  font-family: sans-serif;
+  border-radius: 30px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between; /* Space items to opposite corners */
+  align-items: center;
+}
+.main-container {
+  display: flex;
+  width: 100%; /* Full width */
+  height: 100%; /* Full viewport height */
+  padding: 10px; /* Add padding to prevent margin collapse */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+.section1-container {
+    background-color: #FFFFFF;
+    margin-right: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 85%;
+    width: 70%;
+    border-radius: 30px;
+}
+.section2-container {
+  background-color: #EBEBEB;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 30%;
+  height: 85%;
+  border-radius: 30px;
+}
+.section-divider {
+  display: flex;
+  justify-content: space-between; /* Space items to opposite corners */
+  align-items: center;
+}
+.test-title{
+  margin: 0;
+  padding: 15px;
+  color:black;
+  margin: auto;
+}
+.dayGrossBtn, .totalItemsBtn {
+  margin-right: 20px;
+  background-color: #C82D2D;
+  border: none;
+  border-radius: 5px;
+  font-size: small;
+  color: black;
+  width: 80px;
+  height: 24px;
+  font-weight: bold;
+}
+.section1-checkout-btn, .nonVeg-button, .veg-button{
+  background-color:#C82D2D;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  padding: 6px;
+  color: black;
+  width: 120px;
+  height: 41px;
+  font-weight: bold;
+  margin: 2px;
+}
+.section1-checkout-btn:active, .nonVeg-button:active, .veg-button:active {
+  transform: scale(0.95);
+}
+.dayGrossBtn:active, .totalItemsBtn:active{
+  background-color: #EBEBEB;
+  transform: scale(0.95);
+}
+.nonVeg-button:active, .veg-button:active {
+  background-color: #FFFFFF;
+}
+.nonVeg-button:hover, .veg-button:hover, .section1-checkout-btn:hover {
+  cursor: pointer;
+}
