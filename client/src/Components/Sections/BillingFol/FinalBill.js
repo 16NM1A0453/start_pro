@@ -11,7 +11,7 @@ const FinalBill = () => {
   const dispatch = useDispatch();
   //initial value is given as 0 for now later, the initial value should be based on billNum present in the db for the current date
   const [billNumber, setBillNumber] = useState(1);
-  const [billTotalAmount, setBillTotalAmount] = useState(0);
+  const [todaysDate, setTodaysDate] = useState(moment(new Date()).format('MM/DD/YYYY'));
 
   const { totalItems } = useSelector((state) => state.itemsStore);
   const filteredInvoiceData = totalItems?.filter(item => item.quantity > 0);
@@ -33,7 +33,6 @@ const FinalBill = () => {
 
   useEffect(() => {
     //get the Bills for a whole day
-    // if(billNumber === 1)
     dispatch(fetchDayBills()).then((resp) => {
       if (resp?.payload) {
         //filters the bills according to the date
@@ -61,8 +60,6 @@ const FinalBill = () => {
     };
 
       try {
-        // const result = await axios.post('http://localhost:3000/addbill', bill);
-        // console.log(result.data.id)
         dispatch(fetchAddBills(bill)).then((resp) => {
           if (resp?.payload?.id) {
               alert('Bill sent successfully with ID: ' + resp?.payload?.id);
@@ -112,9 +109,6 @@ const FinalBill = () => {
                 {filteredInvoiceData?.length ? (
                   filteredInvoiceData.map((item, index) => (
                     <tr key={index}>
-                      <td className='td-img'>
-                        <img src={item.itemImg} alt={item.item_Name} className='item-img' />
-                      </td>
                       <td>
                         <span className='item-quant'>
                           {item.item_Name} ({item.quantity})
@@ -132,9 +126,9 @@ const FinalBill = () => {
             </div>
           </div>
           <div className='finalBill-print-view'>
-            <div className='res-address-col'>Address 1 lane, Shop no: 03, Nallaganda, Gopanapally</div>
+            <div className='res-address-col'>Address 1 lane, Shop no: 03, Street name, City name</div>
             <div className='billing-details'>
-              <div className='date-time-display'>Date: 29/10/2024</div>
+              <div className='date-time-display'>Date: {todaysDate}</div>
               <div className='date-time-display'>Bill no: {billNumber}</div>
             </div>
             <h3 className='finalBill-title'>Total Items</h3>
@@ -144,16 +138,12 @@ const FinalBill = () => {
                   <td>Item</td>
                   <td>Quantity</td>
                   <td>Price</td>
-                  <td>Total</td>
                 </tr>
               </thead>
               <tbody>
                 {filteredInvoiceData?.length ? (
                   filteredInvoiceData?.map((item, index) => (
                     <tr key={index}>
-                      <td className='td-img'>
-                        <span className='item-text'>{item.item_Name}</span>
-                      </td>
                       <td>
                         <span className='item-text'>{item.quantity} PC</span>
                       </td>

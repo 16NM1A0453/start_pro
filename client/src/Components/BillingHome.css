@@ -11,7 +11,7 @@
 .page-container {
   width: 95%;
   height: 95%;
-  background-color: #C82D2D;
+  background-color: #C45D08;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
@@ -65,22 +65,22 @@
 }
 .dayGrossBtn, .totalItemsBtn {
   margin-right: 20px;
-  background-color: #C82D2D;
+  background-color: #C45D08;
   border: none;
   border-radius: 5px;
   font-size: small;
-  color: black;
+  color: white;
   width: 80px;
   height: 24px;
   font-weight: bold;
 }
 .section1-checkout-btn, .nonVeg-button, .veg-button{
-  background-color:#C82D2D;
+  background-color:#C45D08;
   border: none;
   border-radius: 5px;
   font-size: large;
   padding: 6px;
-  color: black;
+  color: white;
   width: 120px;
   height: 41px;
   font-weight: bold;

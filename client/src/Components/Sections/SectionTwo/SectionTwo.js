@@ -20,117 +20,36 @@ const SectionTwo = () => {
     const dispatch = useDispatch();
     const [isError, setIsError] = useState(false);
     const { countVItem1, countVItem2, countVItem3, countVItem4, countVItem5, countVItem6, countVItem7, countVItem8, countVItem9, countVItem10 } = useSelector((state) => state.itemsStore);
-
+    const items = [
+        { name: 'Veg - Full Meals', count: countVItem1, setCount: setCountVItem1 },
+        { name: 'Paneer Curry', count: countVItem2, setCount: setCountVItem2 },
+        { name: 'Mushroom Curry', count: countVItem3, setCount: setCountVItem3 },
+        { name: 'Bendi Curry', count: countVItem4, setCount: setCountVItem4 },
+        { name: 'Curd Rice', count: countVItem5, setCount: setCountVItem5 },
+        { name: 'Potato Fry', count: countVItem6, setCount: setCountVItem6 },
+        { name: 'Tomato Pappu / Dal', count: countVItem7, setCount: setCountVItem7 },
+        { name: 'Rasam', count: countVItem8, setCount: setCountVItem8 },
+        { name: 'Pulihora', count: countVItem9, setCount: setCountVItem9 },
+        { name: 'Bagara Rice', count: countVItem10, setCount: setCountVItem10 },
+    ];
     return (
         <div className='sectionTwo-container'>
             <div className='sectionTwo-main-container'>
                 <div className='sectionTwo-items-container'>
-                    {/* row one */}
-                    <div className='sectionTwo-row-one'>
-                        <div className='sectionTwo-item1-class'>
-                            <img src={item1} alt="Veg - Full Meals" className='sectionTwo-item1-img' />
-                            <p className='item-name'>Veg - Full Meals</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem1 > 0) && dispatch(setCountVItem1(countVItem1 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem1}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem1(countVItem1 + 1))}>+</button>
+                {items.map((item, index) => (
+                        <div key={index} className='sectionTwo-addItem'>
+                            <span className='item-name'>{item.name}</span>
+                            <div className='add-buttons'>
+                                <button className='sectionTwo-minus-btn' onClick={() => item.count > 0 && dispatch(item.setCount(item.count - 1))}>
+                                    -
+                                </button>
+                                <span className='sectionTwo-count-class'>{item.count}</span>
+                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(item.setCount(item.count + 1))}>
+                                    +
+                                </button>
                             </div>
                         </div>
-
-                        <div className='sectionTwo-item2-class'>
-                            <img src={item2} alt="Paneer Curry" className='sectionTwo-item2-img' />
-                            <p className='item-name'>Paneer Curry</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem2 > 0) && dispatch(setCountVItem2(countVItem2 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem2}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem2(countVItem2 + 1))}>+</button>
-                            </div>
-                        </div>
-
-                        <div className='sectionTwo-item3-class'>
-                            <img src={item3} alt="Mushroom Curry" className='sectionTwo-item3-img' />
-                            <p className='item-name'>Mushroom Curry</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem3 > 0) && dispatch(setCountVItem3(countVItem3 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem3}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem3(countVItem3 + 1))}>+</button>
-                            </div>
-                        </div>
-
-                        <div className='sectionTwo-item4-class'>
-                        <img src={item4} alt="Bendi Curry" className='sectionTwo-item4-img' />
-                        <p className='item-name'>Bendi Curry</p>
-                        <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem4 > 0) && dispatch(setCountVItem4(countVItem4 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem4}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem4(countVItem4 + 1))}>+</button>
-                            </div>
-                        </div>
-                    </div>
-                    {/* row two */}
-                    <div className='sectionTwo-row-two'>
-                        <div className='sectionTwo-item5-class'>
-                            <img src={item5} alt="Curd Rice" className='sectionTwo-item5-img' />
-                            <p className='item-name'>Curd Rice</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem5 > 0) && dispatch(setCountVItem5(countVItem5 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem5}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem5(countVItem5 + 1))}>+</button>
-                            </div>
-                        </div>
-
-                        <div className='sectionTwo-item6-class'>
-                            <img src={item6} alt="Potato Fry" className='sectionTwo-item6-img' />
-                            <p className='item-name'>Potato Fry</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem6 > 0) && dispatch(setCountVItem6(countVItem6 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem6}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem6(countVItem6 + 1))}>+</button>
-                            </div>
-                        </div>
-
-                        <div className='sectionTwo-item7-class'>
-                            <img src={item7} alt="Dal/Tomato Pappu" className='sectionTwo-item7-img' />
-                            <p className='item-name'>Tomato Pappu / Dal</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem7 > 0) && dispatch(setCountVItem7(countVItem7 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem7}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem7(countVItem7 + 1))}>+</button>
-                            </div>
-                        </div>
-
-                        <div className='sectionTwo-item8-class'>
-                            <img src={item8} alt="Rasam" className='sectionTwo-item8-img' />
-                            <p className='item-name'>Rasam</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem8 > 0) && dispatch(setCountVItem8(countVItem8 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem8}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem8(countVItem8 + 1))}>+</button>
-                            </div>
-                        </div>
-                    </div>
-                    {/* row three */}
-                    <div className='sectionTwo-row-three'>
-                        <div className='sectionTwo-item9-class'>
-                            <img src={item9} alt="Pulihora" className='sectionTwo-item9-img' />
-                            <p className='item-name'>Pulihora</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem9 > 0) && dispatch(setCountVItem9(countVItem9 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem9}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem9(countVItem9 + 1))}>+</button>
-                            </div>
-                        </div>
-
-                        <div className='sectionTwo-item10-class'>
-                            <img src={item10} alt="Bagara Rice" className='sectionTwo-item10-img' />
-                            <p className='item-name'>Bagara Rice</p>
-                            <div className='sectionTwo-addItem'>
-                                <button className='sectionTwo-minus-btn' onClick={() => (countVItem10 > 0) && dispatch(setCountVItem10(countVItem10 - 1))}>-</button>
-                                <span className='sectionTwo-count-class'>{countVItem10}</span>
-                                <button className='sectionTwo-plus-btn' onClick={() => dispatch(setCountVItem10(countVItem10 + 1))}>+</button>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

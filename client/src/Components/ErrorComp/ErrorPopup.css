@@ -14,7 +14,7 @@
 
 .error-popup-content {
     background-color: #f76b8a;
-    color:#C82D2D;
+    color:#C45D08;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -27,5 +27,5 @@
     right: 10px;
     cursor: pointer;
     font-size: 18px;
-    color:#C82D2D;
+    color:#C45D08;
 }

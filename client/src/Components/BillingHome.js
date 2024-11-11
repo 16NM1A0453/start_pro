@@ -50,26 +50,26 @@ const BillingHome = () => {
   };
 
   const invoiceData = [
-    { id: 1, item_Name: 'Chicken Dum Biriyani', itemImg: item1, quantity: countNVItem1, price: 100 },
-    { id: 2, item_Name: 'Chicken Fried Biriyani', itemImg: item2, quantity: countNVItem2, price: 200 },
-    { id: 3, item_Name: 'Chicken with Bagara', itemImg: item3, quantity: countNVItem3, price: 400 },
-    { id: 4, item_Name: 'Chicken Curry', itemImg: item4, quantity: countNVItem4, price: 150 },
-    { id: 5, item_Name: 'Chicken Fry Curry', itemImg: item5, quantity: countNVItem5, price: 100 },
-    { id: 6, item_Name: 'Natukodi Curry', itemImg: item6, quantity: countNVItem6, price: 200 },
-    { id: 7, item_Name: 'Gongura Chicken', itemImg: item7, quantity: countNVItem7, price: 400 },
-    { id: 8, item_Name: 'Mutton Curry', itemImg: item8, quantity: countNVItem8, price: 150 },
-    { id: 9, item_Name: 'Mutton Fry Curry', itemImg: item9, quantity: countNVItem9, price: 150 },
-    { id: 10, item_Name: 'Egg Curry', itemImg: item10, quantity: countNVItem10, price: 150 },
-    { id: 11, item_Name: 'Veg - Full Meals', itemImg: item11, quantity: countVItem1, price: 100 },
-    { id: 12, item_Name: 'Paneer Curry', itemImg: item12, quantity: countVItem2, price: 200 },
-    { id: 13, item_Name: 'Mushroom Curry', itemImg: item13, quantity: countVItem3, price: 400 },
-    { id: 14, item_Name: 'Bendi Fry', itemImg: item14, quantity: countVItem4, price: 150 },
-    { id: 15, item_Name: 'Curd Rice', itemImg: item15, quantity: countVItem5, price: 100 },
-    { id: 16, item_Name: 'Potato Fry', itemImg: item16, quantity: countVItem6, price: 200 },
-    { id: 17, item_Name: 'Tomato Pappu / Dal', itemImg: item17, quantity: countVItem7, price: 400 },
-    { id: 18, item_Name: 'Rasam', itemImg: item18, quantity: countVItem8, price: 150 },
-    { id: 19, item_Name: 'Pulihora', itemImg: item19, quantity: countVItem9, price: 150 },
-    { id: 20, item_Name: 'Bagara Rice', itemImg: item20, quantity: countVItem10, price: 150 },
+    { id: 1, item_Name: 'Chicken Dum Biriyani', quantity: countNVItem1, price: 100 },
+    { id: 2, item_Name: 'Chicken Fried Biriyani', quantity: countNVItem2, price: 200 },
+    { id: 3, item_Name: 'Chicken with Bagara', quantity: countNVItem3, price: 400 },
+    { id: 4, item_Name: 'Chicken Curry', quantity: countNVItem4, price: 150 },
+    { id: 5, item_Name: 'Chicken Fry Curry', quantity: countNVItem5, price: 100 },
+    { id: 6, item_Name: 'Natukodi Curry', quantity: countNVItem6, price: 200 },
+    { id: 7, item_Name: 'Gongura Chicken', quantity: countNVItem7, price: 400 },
+    { id: 8, item_Name: 'Mutton Curry', quantity: countNVItem8, price: 150 },
+    { id: 9, item_Name: 'Mutton Fry Curry', quantity: countNVItem9, price: 150 },
+    { id: 10, item_Name: 'Egg Curry', quantity: countNVItem10, price: 150 },
+    { id: 11, item_Name: 'Veg - Full Meals', quantity: countVItem1, price: 100 },
+    { id: 12, item_Name: 'Paneer Curry', quantity: countVItem2, price: 200 },
+    { id: 13, item_Name: 'Mushroom Curry', quantity: countVItem3, price: 400 },
+    { id: 14, item_Name: 'Bendi Fry', quantity: countVItem4, price: 150 },
+    { id: 15, item_Name: 'Curd Rice', quantity: countVItem5, price: 100 },
+    { id: 16, item_Name: 'Potato Fry', quantity: countVItem6, price: 200 },
+    { id: 17, item_Name: 'Tomato Pappu / Dal', quantity: countVItem7, price: 400 },
+    { id: 18, item_Name: 'Rasam', quantity: countVItem8, price: 150 },
+    { id: 19, item_Name: 'Pulihora', quantity: countVItem9, price: 150 },
+    { id: 20, item_Name: 'Bagara Rice', quantity: countVItem10, price: 150 },
   ];
 
   const toInvoicePage = () => {
@@ -92,7 +92,7 @@ const BillingHome = () => {
     <div className='container'>
       <div className='page-container'>
         <header className='header-container'>
-          <h1 className='test-title'>SSS </h1>
+          <h1 className='test-title'>My Restaurant</h1>
         </header>
         <main className='main-container'>
           <section className='section1-container'>
